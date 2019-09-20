@@ -74,14 +74,14 @@ client.on("message", message => {
         }, 2500);
       }
     }
-    if( Message.content.match(`おっと。データベースで`) ){
+    if( message.content.match(`おっと。データベースで`) ){
       option.count = 0;
       setTimeout(() => {
         if( option.count ) return;
         message.channel.send(`::atk`);
       }, 300);
     }
-    if( Message.content.match(`]のHP:`) ){
+    if( message.content.match(`]のHP:`) ){
       option.count = 0;
       setTimeout(() => {
         if( option.count ) return;
