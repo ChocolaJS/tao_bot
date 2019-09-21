@@ -42,7 +42,7 @@ client.on("message", message => {
       let split = message.content.split(/の攻撃！|\s-\s|のHP\:|\n|はやられてしまった。。。/);
       let player = message.guild.members.find(m => m.displayName == split[11]);
 
-      if( plyaer ){
+      if( player ){
         setTimeout(() => message.channel.send(`::i i ${player.user}`), 350);
       }
     }
